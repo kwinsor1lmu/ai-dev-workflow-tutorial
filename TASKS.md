@@ -76,4 +76,5 @@ Deploy the finished dashboard and confirm public access.
 
 Live URL: https://sales-dashboard-kwinsor.streamlit.app/
 
-Commit:
+Commit: b50b27d
+Notes: Deployment itself performed manually on Streamlit Community Cloud (outside this repo); this commit records the live URL in TASKS.md and README.md.
