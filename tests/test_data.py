@@ -1,7 +1,7 @@
 import pandas as pd
 import pytest
 
-from data import total_sales, total_orders
+from data import total_sales, total_orders, monthly_sales_trend
 
 
 @pytest.fixture
@@ -26,3 +26,9 @@ def test_total_sales(sample_df):
 
 def test_total_orders(sample_df):
     assert total_orders(sample_df) == 4
+
+
+def test_monthly_sales_trend(sample_df):
+    result = monthly_sales_trend(sample_df)
+    assert list(result["month"].astype(str)) == ["2024-01", "2024-02"]
+    assert result["total_amount"].tolist() == pytest.approx([234.95, 364.94])
