@@ -10,14 +10,6 @@ This file tracks all work for the e-commerce analytics dashboard.
 
 ## To Do
 
-### TASK-3: KPI cards implementation
-Display Total Sales and Total Orders as formatted KPI cards.
-- [ ] Total Sales calculated correctly and formatted as currency ($X,XXX,XXX)
-- [ ] Total Orders calculated correctly with number formatting
-- [ ] KPIs displayed prominently at the top of the dashboard
-
-Commit:
-
 ### TASK-4: Sales trend chart
 Build a line chart showing sales over time.
 - [ ] Line chart renders sales trend with time on the X-axis and sales amount on the Y-axis
@@ -71,3 +63,12 @@ Load sales-data.csv with Pandas and validate its structure.
 
 Commit: f3000f3
 Notes: pandas reports dtypes as `str`/`datetime64[us]` rather than `object`/`datetime64[ns]` (newer pandas default) — semantically equivalent, satisfies the interface contract.
+
+### TASK-3: KPI cards implementation
+Display Total Sales and Total Orders as formatted KPI cards.
+- [x] Total Sales calculated correctly and formatted as currency ($X,XXX,XXX)
+- [x] Total Orders calculated correctly with number formatting
+- [x] KPIs displayed prominently at the top of the dashboard
+
+Commit: f8896da
+Notes: clean
