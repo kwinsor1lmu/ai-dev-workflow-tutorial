@@ -1,7 +1,13 @@
 import pandas as pd
 import pytest
 
-from data import total_sales, total_orders, monthly_sales_trend
+from data import (
+    total_sales,
+    total_orders,
+    monthly_sales_trend,
+    sales_by_category,
+    sales_by_region,
+)
 
 
 @pytest.fixture
@@ -32,3 +38,15 @@ def test_monthly_sales_trend(sample_df):
     result = monthly_sales_trend(sample_df)
     assert list(result["month"].astype(str)) == ["2024-01", "2024-02"]
     assert result["total_amount"].tolist() == pytest.approx([234.95, 364.94])
+
+
+def test_sales_by_category(sample_df):
+    result = sales_by_category(sample_df)
+    assert result["category"].tolist() == ["Wearables", "Audio", "Accessories"]
+    assert result["total_amount"].tolist() == pytest.approx([299.99, 159.98, 139.92])
+
+
+def test_sales_by_region(sample_df):
+    result = sales_by_region(sample_df)
+    assert result["region"].tolist() == ["East", "North", "South", "West"]
+    assert result["total_amount"].tolist() == pytest.approx([299.99, 159.98, 74.97, 64.95])
