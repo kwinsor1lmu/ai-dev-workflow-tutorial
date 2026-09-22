@@ -10,14 +10,6 @@ This file tracks all work for the e-commerce analytics dashboard.
 
 ## To Do
 
-### TASK-6: Testing and refinement
-Verify the dashboard against the PRD's acceptance criteria and polish the presentation.
-- [ ] Dashboard runs with no errors or warnings
-- [ ] All values verified against expected output (~$116,500 total sales, 482 orders, Electronics top category)
-- [ ] Layout and labels reviewed for a professional, executive-presentation-ready appearance
-
-Commit:
-
 ### TASK-7: Deployment to Streamlit Community Cloud
 Deploy the finished dashboard and confirm public access.
 - [ ] App deployed to Streamlit Community Cloud
@@ -74,3 +66,12 @@ Build bar charts showing sales by category and by region.
 
 Commit: f824ca0
 Notes: clean
+
+### TASK-6: Testing and refinement
+Verify the dashboard against the PRD's acceptance criteria and polish the presentation.
+- [x] Dashboard runs with no errors or warnings
+- [x] All values verified against expected output (~$116,500 total sales, 482 orders, Electronics top category)
+- [x] Layout and labels reviewed for a professional, executive-presentation-ready appearance
+
+Commit: 15dfbc1
+Notes: Verified against real data: total sales $116,500.21, 482 orders, Electronics top category ($42,683.67), all 4 regions present. Added chart titles and axis labels to all three charts for the polish step. No other deviations.
