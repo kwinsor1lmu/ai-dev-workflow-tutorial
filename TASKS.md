@@ -10,14 +10,6 @@ This file tracks all work for the e-commerce analytics dashboard.
 
 ## To Do
 
-### TASK-7: Deployment to Streamlit Community Cloud
-Deploy the finished dashboard and confirm public access.
-- [ ] App deployed to Streamlit Community Cloud
-- [ ] Public shareable URL loads the dashboard without errors
-- [ ] Dashboard loads within 5 seconds on the deployed URL
-
-Commit:
-
 ## In Progress
 
 ## Done
@@ -75,3 +67,13 @@ Verify the dashboard against the PRD's acceptance criteria and polish the presen
 
 Commit: 15dfbc1
 Notes: Verified against real data: total sales $116,500.21, 482 orders, Electronics top category ($42,683.67), all 4 regions present. Added chart titles and axis labels to all three charts for the polish step. No other deviations.
+
+### TASK-7: Deployment to Streamlit Community Cloud
+Deploy the finished dashboard and confirm public access.
+- [x] App deployed to Streamlit Community Cloud
+- [x] Public shareable URL loads the dashboard without errors
+- [x] Dashboard loads within 5 seconds on the deployed URL
+
+Live URL: https://sales-dashboard-kwinsor.streamlit.app/
+
+Commit:
