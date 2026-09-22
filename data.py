@@ -1,0 +1,8 @@
+import pandas as pd
+
+CSV_PATH = "data/sales-data.csv"
+
+
+def load_sales_data() -> pd.DataFrame:
+    df = pd.read_csv(CSV_PATH, parse_dates=["date"])
+    return df
