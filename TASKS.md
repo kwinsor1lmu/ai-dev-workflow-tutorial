@@ -69,3 +69,4 @@ Set up the Python project structure, dependencies, and folders needed to build t
 - [x] `streamlit run app.py` launches a blank/placeholder app
 
 Commit: e5caa22
+Notes: First `streamlit run app.py` attempt hit Streamlit's interactive first-run email prompt and failed (exit 127) in this non-interactive shell; verified startup instead with `--server.headless true`. No other deviations.
