@@ -10,14 +10,6 @@ This file tracks all work for the e-commerce analytics dashboard.
 
 ## To Do
 
-### TASK-2: Data loading and basic structure
-Load sales-data.csv with Pandas and validate its structure.
-- [ ] CSV loads into a DataFrame with correct column types (date, numeric, categorical)
-- [ ] Row count matches expected 482 records
-- [ ] Basic error handling for missing/malformed file
-
-Commit:
-
 ### TASK-3: KPI cards implementation
 Display Total Sales and Total Orders as formatted KPI cards.
 - [ ] Total Sales calculated correctly and formatted as currency ($X,XXX,XXX)
@@ -70,3 +62,12 @@ Set up the Python project structure, dependencies, and folders needed to build t
 
 Commit: e5caa22
 Notes: First `streamlit run app.py` attempt hit Streamlit's interactive first-run email prompt and failed (exit 127) in this non-interactive shell; verified startup instead with `--server.headless true`. No other deviations.
+
+### TASK-2: Data loading and basic structure
+Load sales-data.csv with Pandas and validate its structure.
+- [x] CSV loads into a DataFrame with correct column types (date, numeric, categorical)
+- [x] Row count matches expected 482 records
+- [x] Basic error handling for missing/malformed file
+
+Commit: f3000f3
+Notes: pandas reports dtypes as `str`/`datetime64[us]` rather than `object`/`datetime64[ns]` (newer pandas default) — semantically equivalent, satisfies the interface contract.
