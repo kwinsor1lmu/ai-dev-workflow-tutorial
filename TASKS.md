@@ -10,14 +10,6 @@ This file tracks all work for the e-commerce analytics dashboard.
 
 ## To Do
 
-### TASK-5: Category and region breakdowns
-Build bar charts showing sales by category and by region.
-- [ ] Category bar chart shows all 5 categories, sorted by sales value descending
-- [ ] Region bar chart shows all 4 regions, sorted by sales value descending
-- [ ] Both charts have interactive tooltips with exact values
-
-Commit:
-
 ### TASK-6: Testing and refinement
 Verify the dashboard against the PRD's acceptance criteria and polish the presentation.
 - [ ] Dashboard runs with no errors or warnings
@@ -72,4 +64,13 @@ Build a line chart showing sales over time.
 - [x] Chart data matches expected calculations from the CSV
 
 Commit: 328bfcd
+Notes: clean
+
+### TASK-5: Category and region breakdowns
+Build bar charts showing sales by category and by region.
+- [x] Category bar chart shows all 5 categories, sorted by sales value descending
+- [x] Region bar chart shows all 4 regions, sorted by sales value descending
+- [x] Both charts have interactive tooltips with exact values
+
+Commit: f824ca0
 Notes: clean
