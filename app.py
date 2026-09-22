@@ -33,20 +33,37 @@ col2.metric("Total Orders", f"{total_orders(sales_df):,}")
 st.subheader("Sales Trend Over Time")
 trend_df = monthly_sales_trend(sales_df)
 trend_df["month"] = trend_df["month"].astype(str)
-fig_trend = px.line(trend_df, x="month", y="total_amount", markers=True)
+fig_trend = px.line(
+    trend_df,
+    x="month",
+    y="total_amount",
+    markers=True,
+    title="Monthly Sales Trend",
+    labels={"month": "Month", "total_amount": "Total Sales ($)"},
+)
 st.plotly_chart(fig_trend, use_container_width=True)
 
 st.subheader("Breakdowns")
 col3, col4 = st.columns(2)
 
 with col3:
-    st.write("Sales by Category")
     category_df = sales_by_category(sales_df)
-    fig_category = px.bar(category_df, x="category", y="total_amount")
+    fig_category = px.bar(
+        category_df,
+        x="category",
+        y="total_amount",
+        title="Sales by Category",
+        labels={"category": "Category", "total_amount": "Total Sales ($)"},
+    )
     st.plotly_chart(fig_category, use_container_width=True)
 
 with col4:
-    st.write("Sales by Region")
     region_df = sales_by_region(sales_df)
-    fig_region = px.bar(region_df, x="region", y="total_amount")
+    fig_region = px.bar(
+        region_df,
+        x="region",
+        y="total_amount",
+        title="Sales by Region",
+        labels={"region": "Region", "total_amount": "Total Sales ($)"},
+    )
     st.plotly_chart(fig_region, use_container_width=True)
