@@ -10,14 +10,6 @@ This file tracks all work for the e-commerce analytics dashboard.
 
 ## To Do
 
-### TASK-4: Sales trend chart
-Build a line chart showing sales over time.
-- [ ] Line chart renders sales trend with time on the X-axis and sales amount on the Y-axis
-- [ ] Interactive tooltips show exact values
-- [ ] Chart data matches expected calculations from the CSV
-
-Commit:
-
 ### TASK-5: Category and region breakdowns
 Build bar charts showing sales by category and by region.
 - [ ] Category bar chart shows all 5 categories, sorted by sales value descending
@@ -71,4 +63,13 @@ Display Total Sales and Total Orders as formatted KPI cards.
 - [x] KPIs displayed prominently at the top of the dashboard
 
 Commit: f8896da
+Notes: clean
+
+### TASK-4: Sales trend chart
+Build a line chart showing sales over time.
+- [x] Line chart renders sales trend with time on the X-axis and sales amount on the Y-axis
+- [x] Interactive tooltips show exact values
+- [x] Chart data matches expected calculations from the CSV
+
+Commit: 328bfcd
 Notes: clean
