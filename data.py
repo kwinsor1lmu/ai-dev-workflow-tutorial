@@ -1,0 +1,49 @@
+from pathlib import Path
+
+import pandas as pd
+
+CSV_PATH = Path(__file__).parent / "data" / "sales-data.csv"
+
+
+def load_sales_data() -> pd.DataFrame:
+    df = pd.read_csv(CSV_PATH, parse_dates=["date"])
+    return df
+
+
+def total_sales(df: pd.DataFrame) -> float:
+    return df["total_amount"].sum()
+
+
+def total_orders(df: pd.DataFrame) -> int:
+    return len(df)
+
+
+def monthly_sales_trend(df: pd.DataFrame) -> pd.DataFrame:
+    monthly = (
+        df.groupby(df["date"].dt.to_period("M"))["total_amount"]
+        .sum()
+        .reset_index()
+        .rename(columns={"date": "month"})
+        .sort_values("month")
+    )
+    return monthly
+
+
+def sales_by_category(df: pd.DataFrame) -> pd.DataFrame:
+    return (
+        df.groupby("category")["total_amount"]
+        .sum()
+        .reset_index()
+        .sort_values("total_amount", ascending=False)
+        .reset_index(drop=True)
+    )
+
+
+def sales_by_region(df: pd.DataFrame) -> pd.DataFrame:
+    return (
+        df.groupby("region")["total_amount"]
+        .sum()
+        .reset_index()
+        .sort_values("total_amount", ascending=False)
+        .reset_index(drop=True)
+    )
